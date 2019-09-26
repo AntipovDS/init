@@ -1,0 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    05                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: taethan <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/25 15:50:01 by taethan           #+#    #+#              #
+#    Updated: 2019/09/25 15:50:04 by taethan          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Identify the IP address of the DNS that responds to the following url: slash16.org
+
+nslookup slash16.org | grep Server: | awk '{print $2}'

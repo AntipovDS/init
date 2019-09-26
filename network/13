@@ -1,0 +1,22 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    13                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: taethan <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/09/25 15:50:49 by taethan           #+#    #+#              #
+#    Updated: 2019/09/25 15:50:51 by taethan          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Thanks to the previous question and the reverse DNS find the name of your host
+
+ifconfig en0 | grep 'inet ' | awk '{print $2}'
+host 192.168.23.146 | awk '{print $5}'
+# или
+dig -x 192.168.23.146 | grep 'PTR' | awk '{print$5}'
+# можно ещё так: 
+# dig +short -x 192.168.23.146
+
+# mi-w4.21-school.ru
