@@ -10,4 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
+# List all existing users on the VM
 
+#!/bin/bash
+less /etc/passwd | awk -F':' '{print $1}'

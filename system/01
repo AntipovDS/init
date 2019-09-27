@@ -17,3 +17,4 @@ cat /etc/debian_version
 cat /etc/issue
 # или
 cat /etc/os-release
+# или

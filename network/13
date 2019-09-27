@@ -12,11 +12,11 @@
 
 # Thanks to the previous question and the reverse DNS find the name of your host
 
+# mi-w4.21-school.ru
+
 ifconfig en0 | grep 'inet ' | awk '{print $2}'
 host 192.168.23.146 | awk '{print $5}'
 # или
 dig -x 192.168.23.146 | grep 'PTR' | awk '{print$5}'
 # можно ещё так: 
 # dig +short -x 192.168.23.146
-
-# mi-w4.21-school.ru

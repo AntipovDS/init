@@ -10,4 +10,19 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Write a script which delete an ACTIVE user on the VM
 
+#!/bin/bash
+name=$1
+name2=users | grep -o $1
+if [ $# != 1 ];
+then
+        echo "USAGE: $0 USERNAME"
+fi
+if [ $name = $name2 ];
+then
+        killall -u $name
+        userdel -fr $name
+else
+        echo "$1 IS NOT CORRECT USERNAME"
+fi

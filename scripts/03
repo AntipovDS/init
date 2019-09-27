@@ -10,4 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Three’s a Charm. Write a script of you choice.
 
+#!/bin/sh
+
+du -sh ~
+echo "free memory before clean"
+rm -rf ~/Library/*42_cache*
+echo "clean cache"
+du -sh ~
+echo "cache cleared"

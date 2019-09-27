@@ -10,4 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Name the command that determines the state of the SSH service
 
+sudo systemctl status ssh
+# или
+sudo service ssh status

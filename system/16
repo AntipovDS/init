@@ -10,4 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Find the service which makes it possible to run specific tasks following a regular
+# schedule
 
+cron
+
+# крон - это планировщик задач, демон запускающийся из init.d.
+# например, добавленная строка в файле crontab:
+# 30 18 * * * rm / home / someuser / tmp / *
+# удаляет файлы из tmp определенного юзера каждый день в 18:30
+# простой редактор https://crontab.guru/

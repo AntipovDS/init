@@ -10,4 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Figure out the PID of the SSHD service
 
+pidof sshd
+# или
+pgrep sshd
+# или
+cat /var/run/sshd.pid
+# или
+ps -e | grep sshd | awk '{print $1}'

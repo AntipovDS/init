@@ -10,4 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Name the command that reboots the SSH service.
 
+sudo systemctl restart ssh.service
+# или
+sudo service ssh restart

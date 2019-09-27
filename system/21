@@ -10,4 +10,6 @@
 #                                                                              #
 # **************************************************************************** #
 
+# List all real users on the VM
 
+getent passwd $(basename -a /home/*) | awk -F: '{print $1}'

@@ -10,4 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Find the command that kills ssh service
 
+systemctl stop ssh
+# или
+service ssh stop

@@ -12,9 +12,15 @@
 
 # Find the provider of slash16.org
 
+Amazon
+
 whois slash16.org | grep 'Name Server:' | awk '{print $3}'
 # для того чтобы узнать провайдера #
 
 whois [ip-address] # для того чтобы узнать провайдера #
+
+# или
+nslookup slash16.org | grep '13.33.' | awk '{print $2}'
+whois 13.33.242.74 | grep Amazon
 
 ДОДЕЛАТЬ ПРОВЕРИТЬ!!!!!!!!!!!!!!!
